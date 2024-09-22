@@ -1,0 +1,31 @@
+﻿@model API_Bibliotek.Models.DTOs.BookDTO
+
+<h2>Delete Book</h2>
+
+<h4>Are you sure you want to delete this book?</h4>
+
+<div class="form-group">
+    <label>Title</label>
+    <p class="form-control-static">@Model.Title</p>
+</div>
+
+<div class="form-group">
+    <label>Author</label>
+    <p class="form-control-static">@Model.Author</p>
+</div>
+
+<div class="form-group">
+    <label>Year</label>
+    <p class="form-control-static">@Model.Year</p>
+</div>
+
+<div class="form-group">
+    <label>Is Available</label>
+    <p class="form-control-static">@Model.IsAvailable</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

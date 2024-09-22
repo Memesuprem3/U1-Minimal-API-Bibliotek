@@ -1,0 +1,39 @@
+﻿@model API_Bibliotek.Models.DTOs.BookDTO
+
+<h2>Book Details</h2>
+
+<div class="form-group">
+    <label>Title</label>
+    <p class="form-control-static">@Model.Title</p>
+</div>
+
+<div class="form-group">
+    <label>Author</label>
+    <p class="form-control-static">@Model.Author</p>
+</div>
+
+<div class="form-group">
+    <label>Year</label>
+    <p class="form-control-static">@Model.Year</p>
+</div>
+
+<div class="form-group">
+    <label>Genre</label>
+    <p class="form-control-static">@Model.Genre</p>
+</div>
+
+<div class="form-group">
+    <label>Description</label>
+    <p class="form-control-static">@Model.Description</p>
+</div>
+
+<div class="form-group">
+    <label>Is Available</label>
+    <p class="form-control-static">@Model.IsAvailable</p>
+</div>
+
+<a asp-action="Index" class="btn btn-primary">Back to List</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+<form asp-action="Delete" asp-route-id="@Model.Id" method="post" class="d-inline">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
